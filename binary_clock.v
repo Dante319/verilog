@@ -28,48 +28,48 @@ initial s1 = 0;
 
 always @ (posedge (clk)) begin
  if (reset)
-begin
-  h2<=0;
-  h1<=0;
-  m2 <=0;
-  m1<=0;
-  s2 <= 0;
-  s1 <=0;
-end
+  begin
+   h2<=0;
+   h1<=0;
+   m2 <=0;
+   m1<=0;
+   s2 <= 0;
+   s1 <=0;
+  end
  else if (s2<9)
   s2 <= s2 + 1;
  else
-begin
-  s2 <= 0;
- if(s1 <5)
-s1 <= s1+1;
-else
-begin
-s1 <=0;
-if(m2<9)
-m2 <= m2+1;
-else
-begin
-m2<=0;
-if(m1<5)
-m1 <= m1+1;
-else
-begin
-m1 <=0;
-if(h2<9)
-h2<=h2+1;
-else
-begin
-h2<=0;
-if(h1<2)
-h1<=h1+1;
-else
-h1<=0;
-end
-end
-end
-end
-end
-end
+  begin
+   s2 <= 0;
+   if(s1 <5)
+    s1 <= s1+1;
+   else
+    begin
+     s1 <=0;
+     if(m2<9)
+      m2 <= m2+1;
+     else
+      begin
+       m2<=0;
+       if(m1<5)
+        m1 <= m1+1;
+       else
+        begin
+         m1 <=0;
+         if(h2<9)
+          h2<=h2+1;
+         else
+          begin
+           h2<=0;
+           if(h1<2)
+            h1<=h1+1;
+           else
+            h1<=0;
+          end
+         end
+        end
+       end
+     end
+   end
       
 endmodule
